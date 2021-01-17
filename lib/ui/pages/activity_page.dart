@@ -7,16 +7,7 @@ class ActivityPage extends StatefulWidget {
 
 class _ActivityPageState extends State<ActivityPage> {
   String barcodeScanRes;
-  String value;
-
-  Future scanQR() async {
-    barcodeScanRes = await FlutterBarcodeScanner.scanBarcode(
-        "#ff6666", "Cancel", false, ScanMode.DEFAULT);
-
-    setState(() {
-      value = barcodeScanRes;
-    });
-  }
+  String value = "";
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +15,7 @@ class _ActivityPageState extends State<ActivityPage> {
       children: [
         // Header
         Container(
-          margin: EdgeInsets.only(bottom: 50),
+          margin: EdgeInsets.only(bottom: 20),
           width: double.infinity,
           height: 60,
           color: Colors.indigo[900],
@@ -41,7 +32,7 @@ class _ActivityPageState extends State<ActivityPage> {
         // Content
         Container(
           width: double.infinity,
-          height: MediaQuery.of(context).size.height - 400,
+          height: 300,
           margin: EdgeInsets.symmetric(horizontal: 40),
           padding: EdgeInsets.all(24),
           decoration: BoxDecoration(
@@ -126,6 +117,225 @@ class _ActivityPageState extends State<ActivityPage> {
                       ),
                     ],
                   ),
+                  // List Data
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "21112992938382",
+                        style: GoogleFonts.poppins(
+                            color: Colors.black,
+                            fontSize: 14,
+                            fontWeight: FontWeight.w600),
+                      ),
+                      Row(
+                        children: [
+                          Text(
+                            "11:17",
+                            style: GoogleFonts.poppins(
+                                color: Colors.black,
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600),
+                          ),
+                          Icon(MdiIcons.checkCircleOutline)
+                        ],
+                      ),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "21112992938382",
+                        style: GoogleFonts.poppins(
+                            color: Colors.black,
+                            fontSize: 14,
+                            fontWeight: FontWeight.w600),
+                      ),
+                      Row(
+                        children: [
+                          Text(
+                            "11:17",
+                            style: GoogleFonts.poppins(
+                                color: Colors.black,
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600),
+                          ),
+                          Icon(MdiIcons.checkCircleOutline)
+                        ],
+                      ),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "Scan :" + value,
+                        style: GoogleFonts.poppins(
+                            color: Colors.black,
+                            fontSize: 14,
+                            fontWeight: FontWeight.w600),
+                      ),
+                      Row(
+                        children: [
+                          Text(
+                            "11:17",
+                            style: GoogleFonts.poppins(
+                                color: Colors.black,
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600),
+                          ),
+                          Icon(MdiIcons.checkCircleOutline)
+                        ],
+                      ),
+                    ],
+                  ),
+                  // List Data
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "21112992938382",
+                        style: GoogleFonts.poppins(
+                            color: Colors.black,
+                            fontSize: 14,
+                            fontWeight: FontWeight.w600),
+                      ),
+                      Row(
+                        children: [
+                          Text(
+                            "11:17",
+                            style: GoogleFonts.poppins(
+                                color: Colors.black,
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600),
+                          ),
+                          Icon(MdiIcons.checkCircleOutline)
+                        ],
+                      ),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "21112992938382",
+                        style: GoogleFonts.poppins(
+                            color: Colors.black,
+                            fontSize: 14,
+                            fontWeight: FontWeight.w600),
+                      ),
+                      Row(
+                        children: [
+                          Text(
+                            "11:17",
+                            style: GoogleFonts.poppins(
+                                color: Colors.black,
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600),
+                          ),
+                          Icon(MdiIcons.checkCircleOutline)
+                        ],
+                      ),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "Scan :" + value,
+                        style: GoogleFonts.poppins(
+                            color: Colors.black,
+                            fontSize: 14,
+                            fontWeight: FontWeight.w600),
+                      ),
+                      Row(
+                        children: [
+                          Text(
+                            "11:17",
+                            style: GoogleFonts.poppins(
+                                color: Colors.black,
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600),
+                          ),
+                          Icon(MdiIcons.checkCircleOutline)
+                        ],
+                      ),
+                    ],
+                  ),
+                  // List Data
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "21112992938382",
+                        style: GoogleFonts.poppins(
+                            color: Colors.black,
+                            fontSize: 14,
+                            fontWeight: FontWeight.w600),
+                      ),
+                      Row(
+                        children: [
+                          Text(
+                            "11:17",
+                            style: GoogleFonts.poppins(
+                                color: Colors.black,
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600),
+                          ),
+                          Icon(MdiIcons.checkCircleOutline)
+                        ],
+                      ),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "21112992938382",
+                        style: GoogleFonts.poppins(
+                            color: Colors.black,
+                            fontSize: 14,
+                            fontWeight: FontWeight.w600),
+                      ),
+                      Row(
+                        children: [
+                          Text(
+                            "11:17",
+                            style: GoogleFonts.poppins(
+                                color: Colors.black,
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600),
+                          ),
+                          Icon(MdiIcons.checkCircleOutline)
+                        ],
+                      ),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "Scan :" + value,
+                        style: GoogleFonts.poppins(
+                            color: Colors.black,
+                            fontSize: 14,
+                            fontWeight: FontWeight.w600),
+                      ),
+                      Row(
+                        children: [
+                          Text(
+                            "11:17",
+                            style: GoogleFonts.poppins(
+                                color: Colors.black,
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600),
+                          ),
+                          Icon(MdiIcons.checkCircleOutline)
+                        ],
+                      ),
+                    ],
+                  ),
                 ],
               ),
             ],
@@ -136,8 +346,13 @@ class _ActivityPageState extends State<ActivityPage> {
           height: 45,
           margin: EdgeInsets.only(top: 20),
           child: RaisedButton(
-            onPressed: () {
-              scanQR();
+            onPressed: () async {
+              barcodeScanRes = await FlutterBarcodeScanner.scanBarcode(
+                  "#ff6666", "Cancel", false, ScanMode.DEFAULT);
+
+              setState(() {
+                value = barcodeScanRes;
+              });
             },
             elevation: 0,
             shape: RoundedRectangleBorder(
