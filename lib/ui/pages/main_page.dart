@@ -20,11 +20,10 @@ class _MainPageState extends State<MainPage> {
           SafeArea(
             child: PageView(
               children: [
+                InformationPage(),
                 HistoryPage(),
                 DashboardPage(),
-
                 //TODO : Activity Page
-                //TODO : Message Page
                 //TODO : Profile Page
               ],
             ),
