@@ -9,3 +9,4 @@ part 'dashboard_page.dart';
 part 'main_page.dart';
 part 'history_page.dart';
 part 'information_page.dart';
+part 'profile_page.dart';
