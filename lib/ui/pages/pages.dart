@@ -7,3 +7,4 @@ import 'package:supercharged/supercharged.dart';
 part 'sign_in_page.dart';
 part 'dashboard_page.dart';
 part 'main_page.dart';
+part 'history_page.dart';

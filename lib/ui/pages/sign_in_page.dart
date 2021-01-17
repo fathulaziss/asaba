@@ -64,21 +64,21 @@ class _SignInPageState extends State<SignInPage> {
                   width: double.infinity,
                   height: 50,
                   margin: EdgeInsets.symmetric(horizontal: 24),
-                  padding: EdgeInsets.fromLTRB(10, 2, 10, 2),
+                  padding: EdgeInsets.symmetric(horizontal: 10),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8),
                       color: Colors.grey[350]),
                   child: TextFormField(
                     decoration: InputDecoration(
-                      icon: Icon(
-                        MdiIcons.email,
-                        color: Colors.black,
-                      ),
-                      hintText: "Email",
-                      hintStyle: GoogleFonts.poppins(
-                        color: Colors.black,
-                      ),
-                    ),
+                        icon: Icon(
+                          MdiIcons.email,
+                          color: Colors.black,
+                        ),
+                        hintText: "Email",
+                        hintStyle: GoogleFonts.poppins(
+                          color: Colors.black,
+                        ),
+                        border: InputBorder.none),
                     controller: emailController,
                   ),
                 ),
@@ -89,21 +89,21 @@ class _SignInPageState extends State<SignInPage> {
                   width: double.infinity,
                   height: 45,
                   margin: EdgeInsets.symmetric(horizontal: 24),
-                  padding: EdgeInsets.fromLTRB(10, 2, 10, 2),
+                  padding: EdgeInsets.symmetric(horizontal: 10),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8),
                       color: Colors.grey[350]),
                   child: TextFormField(
                     decoration: InputDecoration(
-                      icon: Icon(
-                        MdiIcons.lock,
-                        color: Colors.black,
-                      ),
-                      hintText: "Password",
-                      hintStyle: GoogleFonts.poppins(
-                        color: Colors.black,
-                      ),
-                    ),
+                        icon: Icon(
+                          MdiIcons.lock,
+                          color: Colors.black,
+                        ),
+                        hintText: "Password",
+                        hintStyle: GoogleFonts.poppins(
+                          color: Colors.black,
+                        ),
+                        border: InputBorder.none),
                     controller: passwordController,
                   ),
                 ),

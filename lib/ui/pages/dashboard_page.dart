@@ -9,18 +9,18 @@ class DashboardPage extends StatelessWidget {
         Container(
           width: double.infinity,
           height: 60,
-          color: Colors.white,
+          color: Colors.indigo[900],
           child: Center(
             child: Text(
-              "Dashboard",
+              "DASHBOARD",
               style: GoogleFonts.poppins(
-                  color: Colors.black,
-                  fontSize: 20,
+                  color: Colors.white,
+                  fontSize: 16,
                   fontWeight: FontWeight.w600),
             ),
           ),
         ),
-        // BODY
+        // Content
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
