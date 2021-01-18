@@ -77,9 +77,7 @@ class _SignInPageState extends State<SignInPage> {
                           size: 20,
                         ),
                         hintText: "Email",
-                        hintStyle: GoogleFonts.poppins(
-                          color: Colors.black,
-                        ),
+                        
                         border: InputBorder.none),
                     controller: emailController,
                   ),
@@ -103,9 +101,6 @@ class _SignInPageState extends State<SignInPage> {
                           size: 20,
                         ),
                         hintText: "Password",
-                        hintStyle: GoogleFonts.poppins(
-                          color: Colors.black,
-                        ),
                         border: InputBorder.none),
                     controller: passwordController,
                   ),
@@ -135,6 +130,27 @@ class _SignInPageState extends State<SignInPage> {
 
                             if (state is UserLoaded) {
                               Get.to(MainPage());
+                            } else {
+                              Get.snackbar("", "",
+                                  backgroundColor: "D9435E".toColor(),
+                                  icon: Icon(
+                                    MdiIcons.closeCircleOutline,
+                                    color: Colors.white,
+                                  ),
+                                  titleText: Text(
+                                    "Sign In Failed",
+                                    style: GoogleFonts.poppins(
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.w600),
+                                  ),
+                                  messageText: Text(
+                                    (state as UserLoadingFailed).message,
+                                    style: GoogleFonts.poppins(
+                                        color: Colors.white),
+                                  ));
+                              setState(() {
+                                isLoading = false;
+                              });
                             }
                           },
                           elevation: 0,

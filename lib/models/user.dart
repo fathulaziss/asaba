@@ -9,7 +9,8 @@ class User extends Equatable {
   final String jabatan;
   final String jenisKelamin;
   final String tempatLahir;
-  final DateTime tglLahir;
+  final String tglLahir;
+  static String token;
 
   User({
     this.id,
@@ -22,6 +23,17 @@ class User extends Equatable {
     this.tempatLahir,
     this.tglLahir,
   });
+
+  factory User.fromJson(Map<String, dynamic> data) => User(
+      id: data['user_id'],
+      name: data['name'],
+      email: data['email'],
+      mobile: data['mobile'],
+      alamat: data['alamat'],
+      jabatan: data['jabatan'],
+      jenisKelamin: data['jenis_kelamin'],
+      tempatLahir: data['tempat_lahir'],
+      tglLahir: data['tgl_lahir']);
 
   @override
   List<Object> get props => [
@@ -46,4 +58,4 @@ User mockUser = User(
     jabatan: "Senior RnD",
     jenisKelamin: "Laki-laki",
     tempatLahir: "Blitar",
-    tglLahir: DateTime.now());
+    tglLahir: "23-07-1997");
