@@ -1,4 +1,4 @@
-package com.example.asaba
+package com.azis.asaba
 
 import io.flutter.embedding.android.FlutterActivity
 

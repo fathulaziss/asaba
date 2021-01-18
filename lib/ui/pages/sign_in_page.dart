@@ -134,8 +134,7 @@ class _SignInPageState extends State<SignInPage> {
                               UserState state = context.read<UserCubit>().state;
 
                               if (state is UserLoaded) {
-                                context
-                                    .read<InformationCubit>()
+                                BlocProvider.of<InformationCubit>(context)
                                     .getInformations();
                                 Get.to(MainPage());
                               } else {
