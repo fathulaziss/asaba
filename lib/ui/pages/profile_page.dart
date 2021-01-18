@@ -45,7 +45,10 @@ class ProfilePage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        "Fatichul Iksan",
+                        (BlocProvider.of<UserCubit>(context).state
+                                as UserLoaded)
+                            .user
+                            .name,
                         style: GoogleFonts.poppins(
                             color: Colors.black,
                             fontSize: 14,
@@ -63,7 +66,10 @@ class ProfilePage extends StatelessWidget {
                             ),
                           ),
                           Text(
-                            "Senior RnD",
+                            (BlocProvider.of<UserCubit>(context).state
+                                    as UserLoaded)
+                                .user
+                                .jabatan,
                             style: GoogleFonts.poppins(
                                 color: Colors.grey,
                                 fontSize: 14,

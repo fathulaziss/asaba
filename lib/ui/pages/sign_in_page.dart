@@ -8,6 +8,7 @@ class SignInPage extends StatefulWidget {
 class _SignInPageState extends State<SignInPage> {
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
+  bool isLoading = false;
 
   @override
   Widget build(BuildContext context) {
@@ -73,6 +74,7 @@ class _SignInPageState extends State<SignInPage> {
                         icon: Icon(
                           MdiIcons.email,
                           color: Colors.black,
+                          size: 20,
                         ),
                         hintText: "Email",
                         hintStyle: GoogleFonts.poppins(
@@ -98,6 +100,7 @@ class _SignInPageState extends State<SignInPage> {
                         icon: Icon(
                           MdiIcons.lock,
                           color: Colors.black,
+                          size: 20,
                         ),
                         hintText: "Password",
                         hintStyle: GoogleFonts.poppins(
@@ -114,21 +117,39 @@ class _SignInPageState extends State<SignInPage> {
                   width: double.infinity,
                   height: 45,
                   margin: EdgeInsets.symmetric(horizontal: 24),
-                  child: RaisedButton(
-                    onPressed: () {},
-                    elevation: 0,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                    color: Colors.indigo[900],
-                    child: Text(
-                      "LOGIN",
-                      style: GoogleFonts.poppins(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w500,
-                          fontSize: 14),
-                    ),
-                  ),
+                  child: isLoading
+                      ? SpinKitFadingCircle(
+                          size: 45,
+                          color: Colors.indigo[900],
+                        )
+                      : RaisedButton(
+                          onPressed: () async {
+                            setState(() {
+                              isLoading = true;
+                            });
+
+                            await context.read<UserCubit>().signIn(
+                                emailController.text, passwordController.text);
+
+                            UserState state = context.read<UserCubit>().state;
+
+                            if (state is UserLoaded) {
+                              Get.to(MainPage());
+                            }
+                          },
+                          elevation: 0,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                          color: Colors.indigo[900],
+                          child: Text(
+                            "LOGIN",
+                            style: GoogleFonts.poppins(
+                                color: Colors.white,
+                                fontWeight: FontWeight.w500,
+                                fontSize: 14),
+                          ),
+                        ),
                 ),
               ],
             ),
