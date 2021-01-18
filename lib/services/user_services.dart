@@ -1,7 +1,7 @@
 part of 'services.dart';
 
 class UserServices {
-  ////SignIn with API
+  //// SignIn with API
   static Future<ApiReturnValue<User>> signIn(String email, String password,
       {http.Client client}) async {
     if (client == null) {
@@ -29,6 +29,27 @@ class UserServices {
     User value = User.fromJson(data['user']);
 
     return ApiReturnValue(value: value);
+  }
+
+  //// SignOut With API
+  static Future<ApiReturnValue> signOut(String token,
+      {http.Client client}) async {
+    if (client == null) {
+      client = http.Client();
+    }
+
+    String url = baseURL + "logout";
+
+    var response =
+        await client.get(url, headers: {"Authorization": "${User.token}"});
+
+    if (response.statusCode != 200) {
+      return ApiReturnValue(message: "Gagal Ambil Data");
+    }
+
+    var data = jsonDecode(response.body);
+
+    return ApiReturnValue(value: data);
   }
 
   //// SignIn with mockUser

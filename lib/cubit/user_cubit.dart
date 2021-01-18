@@ -17,4 +17,14 @@ class UserCubit extends Cubit<UserState> {
       emit(UserLoadingFailed(result.message));
     }
   }
+
+  Future<void> signOut() async {
+    ApiReturnValue result = await UserServices.signOut(User.token);
+
+    if (result.value != null) {
+      emit(UserLoaded(result.value));
+    } else {
+      emit(UserLoadingFailed(result.message));
+    }
+  }
 }
