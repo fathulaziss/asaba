@@ -1,17 +1,13 @@
 part of 'pages.dart';
 
 class MainPage extends StatefulWidget {
-  final int initialPage;
-
-  MainPage({this.initialPage});
-
   @override
   _MainPageState createState() => _MainPageState();
 }
 
 class _MainPageState extends State<MainPage> {
-  int selectedPage;
-  PageController pageController;
+  int selectedPage = 0;
+  PageController pageController = PageController(initialPage: 0);
 
   @override
   Widget build(BuildContext context) {
