@@ -59,4 +59,6 @@ class UserServices {
 
   //   return ApiReturnValue(value: mockUser);
   // }
+
+  //// Get Information with mockInformations
 }

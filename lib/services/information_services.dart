@@ -21,8 +21,6 @@ class InformationServices {
     List<Information> informations =
         (data['data'] as Iterable).map((e) => Information.fromJson(e)).toList();
 
-    print(informations);
-
     return ApiReturnValue(value: informations);
   }
 }
