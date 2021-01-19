@@ -23,4 +23,7 @@ class InformationServices {
 
     return ApiReturnValue(value: informations);
   }
+
+  //// GetInformation with mockInformations
+  static Future<ApiReturnValue<List<Information>>> getInformationss() async {}
 }
