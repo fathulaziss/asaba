@@ -135,7 +135,7 @@ class _SignInPageState extends State<SignInPage> {
 
                               if (state is UserLoaded) {
                                 BlocProvider.of<InformationCubit>(context)
-                                    .getInformations();
+                                    .getInformationss();
                                 Get.to(MainPage());
                               } else {
                                 Get.snackbar("", "",

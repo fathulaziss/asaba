@@ -10,9 +10,8 @@ class _MainPageState extends State<MainPage> {
   PageController pageController = PageController(initialPage: 0);
 
   @override
-  void initState() { 
+  void initState() {
     super.initState();
-    
   }
 
   @override

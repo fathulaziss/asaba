@@ -1,35 +1,13 @@
-part of 'pages.dart';
+part of 'widgets.dart';
 
-class InformationPage extends StatelessWidget {
+class InformationCard extends StatelessWidget {
+  final Information information;
+
+  InformationCard(this.information);
+
   @override
   Widget build(BuildContext context) {
-    return WillPopScope(
-      onWillPop: () async {
-        return null;
-      },
-      child: ListView(
-        children: [
-          Column(
-            children: [
-              // Header
-              Container(
-                width: double.infinity,
-                height: 60,
-                color: Colors.indigo[900],
-                child: Center(
-                  child: Text(
-                    "INFORMATION",
-                    style: GoogleFonts.poppins(
-                        color: Colors.white,
-                        fontSize: 16,
-                        fontWeight: FontWeight.w600),
-                  ),
-                ),
-              ),
-              // Content
-              Column(
-                children: [
-                  Container(
+    return Container(
                     width: double.infinity,
                     margin: EdgeInsets.only(
                         top: 15, left: 15, right: 15, bottom: 10),
@@ -96,13 +74,6 @@ class InformationPage extends StatelessWidget {
                         ),
                       ],
                     ),
-                  ),
-                ],
-              )
-            ],
-          ),
-        ],
-      ),
-    );
+                  );
   }
 }
