@@ -19,9 +19,9 @@ class InformationCubit extends Cubit<InformationState> {
     }
   }
 
-  // Future<void> getInformationss() async {
+  // Future<void> getInformations() async {
   //   ApiReturnValue<List<Information>> result =
-  //       await InformationServices.getInformationss();
+  //       await InformationServices.getInformations();
 
   //   if (result.value != null) {
   //     emit(InformationLoaded(result.value));

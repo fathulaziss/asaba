@@ -32,7 +32,7 @@ class _MainPageState extends State<MainPage> {
                 DashboardPage(),
                 HistoryPage(),
                 ActivityPage(),
-                InformationPage(Information()),
+                InformationPage(),
                 ProfilePage(),
               ],
             ),

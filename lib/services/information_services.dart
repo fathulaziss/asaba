@@ -9,8 +9,8 @@ class InformationServices {
 
     String url = baseURL + "information";
 
-    var response =
-        await client.get(url, headers: {"Authorization": "${User.token}"});
+    var response = await client
+        .get(url, headers: {"Authorization": User.token.toString()});
 
     if (response.statusCode != 200) {
       return ApiReturnValue(message: "Gagal Ambil Data");
@@ -25,9 +25,9 @@ class InformationServices {
   }
 
   //// GetInformation with mockInformations
-  // static Future<ApiReturnValue<List<Information>>> getInformationss() async {
+  // static Future<ApiReturnValue<List<Information>>> getInformations() async {
   //   await Future.delayed(Duration(milliseconds: 500));
 
-  //   return ApiReturnValue(value: mockIformations);
+  //   return ApiReturnValue(value: mockInformation);
   // }
 }
