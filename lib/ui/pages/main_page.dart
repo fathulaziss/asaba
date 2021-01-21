@@ -10,11 +10,6 @@ class _MainPageState extends State<MainPage> {
   PageController pageController = PageController(initialPage: 0);
 
   @override
-  void initState() {
-    super.initState();
-  }
-
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: "2C1F63".toColor(),
@@ -37,7 +32,7 @@ class _MainPageState extends State<MainPage> {
                 DashboardPage(),
                 HistoryPage(),
                 ActivityPage(),
-                InformationPage(),
+                InformationPage(Information()),
                 ProfilePage(),
               ],
             ),

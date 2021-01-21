@@ -1,6 +1,10 @@
 part of 'pages.dart';
 
 class InformationPage extends StatelessWidget {
+  final Information information;
+
+  InformationPage(this.information);
+
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
@@ -9,27 +13,26 @@ class InformationPage extends StatelessWidget {
       },
       child: ListView(
         children: [
-          Column(
-            children: [
-              // Header
-              Container(
-                width: double.infinity,
-                height: 60,
-                color: Colors.indigo[900],
-                child: Center(
-                  child: Text(
-                    "INFORMATION",
-                    style: GoogleFonts.poppins(
-                        color: Colors.white,
-                        fontSize: 16,
-                        fontWeight: FontWeight.w600),
-                  ),
-                ),
+          // Header
+          Container(
+            width: double.infinity,
+            height: 60,
+            color: Colors.indigo[900],
+            child: Center(
+              child: Text(
+                "INFORMATION",
+                style: GoogleFonts.poppins(
+                    color: Colors.white,
+                    fontSize: 16,
+                    fontWeight: FontWeight.w600),
               ),
-              // Content
-              Column(
-                children: [
-                  Container(
+            ),
+          ),
+          // Content
+          Column(
+            children: mockInformation
+                .map(
+                  (e) => Container(
                     width: double.infinity,
                     margin: EdgeInsets.only(
                         top: 15, left: 15, right: 15, bottom: 10),
@@ -46,14 +49,14 @@ class InformationPage extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                "e.title",
+                                e.title,
                                 style: GoogleFonts.poppins(
                                     color: Colors.black,
                                     fontSize: 14,
                                     fontWeight: FontWeight.w600),
                               ),
                               Text(
-                                "e.description",
+                                e.description,
                                 style: GoogleFonts.poppins(
                                     color: Colors.black,
                                     fontSize: 12,
@@ -74,7 +77,7 @@ class InformationPage extends StatelessWidget {
                                         ),
                                       ),
                                       Text(
-                                        "e.dateTime.toString()",
+                                        e.dateTime.toString(),
                                         style: GoogleFonts.poppins(
                                             color: Colors.black,
                                             fontSize: 12,
@@ -83,7 +86,7 @@ class InformationPage extends StatelessWidget {
                                     ],
                                   ),
                                   Text(
-                                    "By ",
+                                    "By " + e.admin,
                                     style: GoogleFonts.poppins(
                                         color: Colors.blue[400],
                                         fontSize: 12,
@@ -97,10 +100,12 @@ class InformationPage extends StatelessWidget {
                       ],
                     ),
                   ),
-                ],
-              )
-            ],
+                )
+                .toList(),
           ),
+          SizedBox(
+            height: 68,
+          )
         ],
       ),
     );

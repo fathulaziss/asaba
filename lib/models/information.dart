@@ -21,21 +21,59 @@ class Information extends Equatable {
   List<Object> get props => [id, title, description, dateTime, admin];
 }
 
-List<Information> mockIformations = [
+List<Information> mockInformation = [
   Information(
-    id: 1,
-    title: "Cuti Bersama Bulan Oktober",
-    description:
-        "Diberitahukan bahwa cuti bersama bulan Oktober 2020 dimulai pada tanggal 28 Oktober - 7 November 2020",
-    dateTime: DateTime.now(),
-    admin: "Fauzi Alfa Alfi",
-  ),
+      id: 1,
+      admin: "asasa",
+      dateTime: DateTime.now(),
+      description: "asasa",
+      title: "asas"),
   Information(
-    id: 2,
-    title: "Cuti Bersama Bulan Desember",
-    description:
-        "Diberitahukan bahwa cuti bersama bulan Desember 2020 dimulai pada tanggal 25 Desember - 2 Januari 2021",
-    dateTime: DateTime.now(),
-    admin: "Fauzi Alfa Alfi",
-  ),
+      id: 1,
+      admin: "asasa",
+      dateTime: DateTime.now(),
+      description: "asasa",
+      title: "asas"),
+  Information(
+      id: 1,
+      admin: "asasa",
+      dateTime: DateTime.now(),
+      description: "asasa",
+      title: "asas"),
+  Information(
+      id: 1,
+      admin: "asasa",
+      dateTime: DateTime.now(),
+      description: "asasa",
+      title: "asas"),
+  Information(
+      id: 1,
+      admin: "asasa",
+      dateTime: DateTime.now(),
+      description: "asasa",
+      title: "asas"),
+  Information(
+      id: 1,
+      admin: "asasa",
+      dateTime: DateTime.now(),
+      description: "asasa",
+      title: "asas"),
+  Information(
+      id: 1,
+      admin: "asasa",
+      dateTime: DateTime.now(),
+      description: "asasa",
+      title: "asas"),
+  Information(
+      id: 1,
+      admin: "asasa",
+      dateTime: DateTime.now(),
+      description: "asasa",
+      title: "asas"),
+  Information(
+      id: 1,
+      admin: "asasa",
+      dateTime: DateTime.now(),
+      description: "asasa",
+      title: "asas"),
 ];

@@ -25,9 +25,9 @@ class InformationServices {
   }
 
   //// GetInformation with mockInformations
-  static Future<ApiReturnValue<List<Information>>> getInformationss() async {
-    await Future.delayed(Duration(milliseconds: 500));
+  // static Future<ApiReturnValue<List<Information>>> getInformationss() async {
+  //   await Future.delayed(Duration(milliseconds: 500));
 
-    return ApiReturnValue(value: mockIformations);
-  }
+  //   return ApiReturnValue(value: mockIformations);
+  // }
 }

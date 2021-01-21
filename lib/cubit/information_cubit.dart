@@ -19,14 +19,14 @@ class InformationCubit extends Cubit<InformationState> {
     }
   }
 
-  Future<void> getInformationss() async {
-    ApiReturnValue<List<Information>> result =
-        await InformationServices.getInformationss();
+  // Future<void> getInformationss() async {
+  //   ApiReturnValue<List<Information>> result =
+  //       await InformationServices.getInformationss();
 
-    if (result.value != null) {
-      emit(InformationLoaded(result.value));
-    } else {
-      emit(InformationLoadingFailed(result.message));
-    }
-  }
+  //   if (result.value != null) {
+  //     emit(InformationLoaded(result.value));
+  //   } else {
+  //     emit(InformationLoadingFailed(result.message));
+  //   }
+  // }
 }
