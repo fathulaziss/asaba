@@ -37,7 +37,10 @@ class InformationPage extends StatelessWidget {
                   )
                 ],
               )
-            : Text("Masih Loading"),
+            : SpinKitFadingCircle(
+                size: 50,
+                color: Colors.indigo[900],
+              ),
       ),
     );
   }

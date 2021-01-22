@@ -230,6 +230,20 @@ class ProfilePage extends StatelessWidget {
                   ),
                 ),
               ),
+              SizedBox(
+                height: 10,
+              ),
+              RaisedButton(
+                onPressed: () async {
+                  await context.read<InformationCubit>().getInformations();
+
+                  InformationState state =
+                      context.read<InformationCubit>().state;
+                  print(state);
+                },
+                color: Colors.amber,
+                child: Text("Cek"),
+              )
             ],
           )
         ],

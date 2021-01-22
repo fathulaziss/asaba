@@ -56,7 +56,7 @@ class InformationCard extends StatelessWidget {
                           ),
                         ),
                         Text(
-                          information.dateTime.toString(),
+                          information.waktu.toString(),
                           style: GoogleFonts.poppins(
                               color: Colors.black,
                               fontSize: 12,

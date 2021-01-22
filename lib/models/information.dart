@@ -4,7 +4,7 @@ class Information extends Equatable {
   final int id;
   final String title;
   final String description;
-  final DateTime dateTime;
+  final DateTime waktu;
   final String admin;
   final int createdBy;
 
@@ -12,7 +12,7 @@ class Information extends Equatable {
       {this.id,
       this.title,
       this.description,
-      this.dateTime,
+      this.waktu,
       this.admin,
       this.createdBy});
 
@@ -20,76 +20,75 @@ class Information extends Equatable {
       id: data['id'],
       title: data['title'],
       description: data['description'],
-      dateTime: DateTime(data['created_at']),
+      waktu: DateTime.parse(data['created_at']),
       createdBy: data['created_by'],
       admin: data['admin']);
 
   @override
-  List<Object> get props =>
-      [id, title, description, dateTime, createdBy, admin];
+  List<Object> get props => [id, title, description, waktu, createdBy, admin];
 }
 
 List<Information> mockInformation = [
   Information(
       id: 1,
       admin: "Fauzi Alfa Alvi",
-      dateTime: DateTime.now(),
+      waktu: DateTime.parse("2020-10-27 12:20:47"),
       description:
           "Diberitahukan bahwa cuti bersama bulan Oktober dimulai pada tanggal 28 Oktober - 7 November 2020",
       title: "Cuti Bersama Bulan Oktober"),
   Information(
       id: 1,
       admin: "Fauzi Alfa Alvi",
-      dateTime: DateTime.now(),
+      waktu: DateTime.parse("2020-10-27 12:20:47"),
       description:
           "Diberitahukan bahwa cuti bersama bulan Oktober dimulai pada tanggal 28 Oktober - 7 November 2020",
       title: "Cuti Bersama Bulan Oktober"),
   Information(
       id: 1,
       admin: "Fauzi Alfa Alvi",
-      dateTime: DateTime.now(),
+      waktu: DateTime.parse("2020-10-27 12:20:47"),
       description:
           "Diberitahukan bahwa cuti bersama bulan Oktober dimulai pada tanggal 28 Oktober - 7 November 2020",
       title: "Cuti Bersama Bulan Oktober"),
   Information(
       id: 1,
       admin: "Fauzi Alfa Alvi",
-      dateTime: DateTime.now(),
+      waktu: DateTime.parse("2020-10-27 12:20:47"),
       description:
           "Diberitahukan bahwa cuti bersama bulan Oktober dimulai pada tanggal 28 Oktober - 7 November 2020",
       title: "Cuti Bersama Bulan Oktober"),
   Information(
       id: 1,
       admin: "Fauzi Alfa Alvi",
-      dateTime: DateTime.now(),
+      waktu: DateTime.parse("2020-10-27 12:20:47"),
       description:
           "Diberitahukan bahwa cuti bersama bulan Oktober dimulai pada tanggal 28 Oktober - 7 November 2020",
       title: "Cuti Bersama Bulan Oktober"),
   Information(
       id: 1,
       admin: "Fauzi Alfa Alvi",
-      dateTime: DateTime.now(),
+      waktu: DateTime.parse("2020-10-27 12:20:47"),
       description:
           "Diberitahukan bahwa cuti bersama bulan Oktober dimulai pada tanggal 28 Oktober - 7 November 2020",
       title: "Cuti Bersama Bulan Oktober"),
   Information(
       id: 1,
       admin: "Fauzi Alfa Alvi",
-      dateTime: DateTime.now(),
+      waktu: DateTime.parse("2020-10-27 12:20:47"),
       description:
           "Diberitahukan bahwa cuti bersama bulan Oktober dimulai pada tanggal 28 Oktober - 7 November 2020",
       title: "Cuti Bersama Bulan Oktober"),
   Information(
       id: 1,
       admin: "Fauzi Alfa Alvi",
-      dateTime: DateTime.now(),
+      waktu: DateTime.parse("2020-10-27 12:20:47"),
       description:
           "Diberitahukan bahwa cuti bersama bulan Oktober dimulai pada tanggal 28 Oktober - 7 November 2020",
       title: "Cuti Bersama Bulan Oktober"),
   Information(
       id: 1,
       admin: "Fauzi Alfa Alvi",
-      dateTime: DateTime.now(),
+      waktu: DateTime.parse("2020-10-27 12:20:47"),
       description:
           "Diberitahukan bahwa cuti bersama bulan Oktober dimulai pada tanggal 28 Oktober - 7 November 2020",
       title: "Cuti Bersama Bulan Oktober"),

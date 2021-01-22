@@ -7,10 +7,12 @@ class InformationServices {
       client = http.Client();
     }
 
-    String url = baseURL + "information";
+    String url = baseURL + 'information';
 
-    var response = await client
-        .get(url, headers: {"Authorization": User.token.toString()});
+    var response = await client.get(url, headers: {
+      "Content-Type": "application/json",
+      "Authorization": "bearer ${User.token}",
+    });
 
     if (response.statusCode != 200) {
       return ApiReturnValue(message: "Gagal Ambil Data");
@@ -24,7 +26,7 @@ class InformationServices {
     return ApiReturnValue(value: informations);
   }
 
-  //// GetInformation with mockInformations
+  // GetInformation with mockInformations
   // static Future<ApiReturnValue<List<Information>>> getInformations() async {
   //   await Future.delayed(Duration(milliseconds: 500));
 
